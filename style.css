@@ -8,9 +8,9 @@
 :root {
     --bg-dark: #0a0a0a;
     --bg-card: #141414;
-    --gold-start: #39ff14;
-    --gold-mid: #00ff41;
-    --gold-end: #00cc33;
+    --gold-start: #FFD700;
+    --gold-mid: #FFA500;
+    --gold-end: #FF8C00;
     --text-primary: #e8e8e8;
     --text-secondary: #b5b5b5;
     --accent: #00ff41;
