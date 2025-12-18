@@ -229,9 +229,9 @@ ctaButton.addEventListener('click', (e) => {
         setTimeout(() => createParticle(), i * 30);
     }
 
-    // Replace with actual agent link
+    // Open Telegram bot in new tab
     setTimeout(() => {
-        window.location.href = 'https://your-ai-agent-link.com';
+        window.open('https://t.me/aiagentsergeyzisman_bot', '_blank');
     }, 300);
 });
 
