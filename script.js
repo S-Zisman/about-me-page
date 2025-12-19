@@ -1,94 +1,3 @@
-// Matrix Rain Effect
-const canvas = document.getElementById('matrixCanvas');
-const ctx = canvas.getContext('2d');
-
-// Set canvas size
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    // Recalculate columns on resize
-    const newColumns = canvas.width / fontSize;
-    // Add or remove drops as needed
-    while (drops.length < newColumns) {
-        drops.push(Math.random() * -100);
-    }
-    while (drops.length > newColumns) {
-        drops.pop();
-    }
-}
-
-// Matrix characters - binary digits
-const matrixChars = '01';
-const fontSize = 16;
-// Reduce number of columns significantly (every 3rd column)
-let columns = Math.floor(window.innerWidth / fontSize / 3);
-
-// Array of drops - one per column
-const drops = [];
-for (let i = 0; i < columns; i++) {
-    drops[i] = Math.random() * -200; // Start at even more random heights
-}
-
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-// Very slow drop speed
-const isMobile = window.innerWidth <= 768;
-const dropSpeed = isMobile ? 200 : 150; // Much slower
-
-// Draw the matrix rain
-function drawMatrix() {
-    // More transparent black to create slower fade effect
-    ctx.fillStyle = 'rgba(10, 10, 10, 0.02)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // Matrix green color with gradient
-    ctx.fillStyle = '#00ff41';
-    ctx.font = fontSize + 'px monospace';
-
-    // Loop through drops (with spacing)
-    for (let i = 0; i < drops.length; i++) {
-        // Random character
-        const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-
-        // Draw character with spacing (every 3rd column)
-        const x = i * fontSize * 3;
-        const y = drops[i] * fontSize;
-
-        // Much more subtle gradient
-        const gradient = ctx.createLinearGradient(x, y - fontSize * 15, x, y);
-        gradient.addColorStop(0, 'rgba(0, 255, 65, 0.05)');
-        gradient.addColorStop(0.5, 'rgba(0, 255, 65, 0.2)');
-        gradient.addColorStop(1, 'rgba(0, 255, 65, 0.4)');
-        ctx.fillStyle = gradient;
-
-        ctx.fillText(text, x, y);
-
-        // Reset drop to top much less frequently
-        if (y > canvas.height && Math.random() > 0.99) {
-            drops[i] = Math.random() * -200;
-        }
-
-        // Move drop down slower (only every other frame gets increment)
-        if (Math.random() > 0.3) {
-            drops[i]++;
-        }
-    }
-}
-
-// Animation loop with performance optimization
-let matrixInterval = setInterval(drawMatrix, dropSpeed);
-
-// Pause animation when page is not visible (performance optimization)
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        clearInterval(matrixInterval);
-    } else {
-        matrixInterval = setInterval(drawMatrix, dropSpeed);
-    }
-});
-
 // Cursor Glow Effect
 const cursorGlow = document.querySelector('.cursor-glow');
 let mouseX = 0;
@@ -235,7 +144,7 @@ ctaButton.addEventListener('click', (e) => {
     }, 300);
 });
 
-// Service card hover tilt effect
+// Service card hover tilt effect (subtle, non-distracting)
 const serviceCards = document.querySelectorAll('.service-card');
 
 serviceCards.forEach(card => {
@@ -247,8 +156,9 @@ serviceCards.forEach(card => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
+        // Увеличенный делитель (100 вместо 20) для едва заметного эффекта
+        const rotateX = (y - centerY) / 100;
+        const rotateY = (centerX - x) / 100;
 
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
     });
