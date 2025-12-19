@@ -917,7 +917,7 @@ body::after {
 
 @media (max-width: 480px) {
     body {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .container {
@@ -1147,11 +1147,11 @@ body::after {
     }
 
     .stats-chart text {
-        font-size: 14px !important;
+        font-size: 15px !important;
     }
 
     .stats-chart .stat-number {
-        font-size: 22px !important;
+        font-size: 24px !important;
     }
 }
 
@@ -1161,11 +1161,11 @@ body::after {
     }
 
     .stats-chart text {
-        font-size: 11px !important;
+        font-size: 13px !important;
     }
 
     .stats-chart .stat-number {
-        font-size: 18px !important;
+        font-size: 22px !important;
     }
 }
 
@@ -1480,16 +1480,16 @@ body::after {
     }
 
     .stat-icon {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .stat-value {
-        font-size: 1.85rem;
+        font-size: 2rem;
     }
 
     .stat-label {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 1.05rem;
+        line-height: 1.6;
     }
 
     .stats-conclusion {
