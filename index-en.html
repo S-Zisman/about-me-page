@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Sergey Zisman - AI agents and automation for B2B services. Increase conversion, automate support and content.">
+    <meta name="keywords" content="AI agents, B2B automation, vibe coding, ChatGPT for business, sales automation">
+    <meta name="author" content="Sergey Zisman">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sergey Zisman - AI Agents and Automation for B2B">
+    <meta property="og:description" content="Implementation of AI agents for sales, support, and content. Systematic approach to business automation.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sergey Zisman - AI Agents and Automation for B2B">
+    <meta name="twitter:description" content="Implementation of AI agents for sales, support, and content. Systematic approach to business automation.">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Sergey Zisman - AI Agents and Automation for B2B</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Language Detector -->
+    <script src="language-detector.js"></script>
+</head>
+<body>
+    <div class="cursor-glow"></div>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <a href="index.html" class="lang-button" title="Russian">🇷🇺 RU</a>
+        <a href="index-en.html" class="lang-button lang-active" title="English">🇬🇧 EN</a>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero fade-in">
+            <h1 class="gradient-text">AI that brings clients, not just answers</h1>
+            <p class="intro-text">
+                My name is <span class="highlight">Sergey Zisman</span>. I help B2B services and experts implement AI in a way
+                that impacts the numbers, not just remains an "interesting experiment".
+            </p>
+            <p class="intro-text">
+                My specialization is <span class="highlight">AI agents and automation</span> for sales, support, and content,
+                plus rapid internal tools through <span class="highlight">vibe coding</span> (AI-powered development in days, not months). I take a task, turn it into a clear process,
+                and build a system that works every day.
+            </p>
+            <p class="intro-text" style="margin-top: 30px; font-size: 1.1rem; color: var(--text-muted);">
+                But before I tell you exactly how it works...<br>
+                <span class="highlight">Look at what's happening right now:</span>
+            </p>
+        </header>
+
+        <!-- Statistics Section -->
+        <section class="stats-section" data-aos="fade-up">
+            <h2 class="gradient-text section-title">While some are thinking, others are racing ahead</h2>
+            <p class="stats-intro">Fresh data from McKinsey, Salesforce, and Gartner (August-December 2025):</p>
+
+            <div class="stats-visual">
+                <svg viewBox="0 0 800 400" class="stats-chart">
+                    <!-- Background grid -->
+                    <defs>
+                        <linearGradient id="barGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00f5ff;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.8" />
+                        </linearGradient>
+                        <linearGradient id="barGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.8" />
+                        </linearGradient>
+                        <linearGradient id="barGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.8" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Chart title -->
+                    <text x="400" y="30" text-anchor="middle" class="chart-title" fill="#fff" font-size="18" font-weight="600">
+                        Companies with AI agents vs traditional methods
+                    </text>
+
+                    <!-- Bar 1: Conversion -->
+                    <g class="stat-bar">
+                        <rect x="100" y="280" width="120" height="0" fill="url(#barGradient1)" rx="8" class="bar-animation bar-1">
+                            <animate attributeName="height" from="0" to="230" dur="1.2s" fill="freeze" begin="0.2s"/>
+                            <animate attributeName="y" from="280" to="50" dur="1.2s" fill="freeze" begin="0.2s"/>
+                        </rect>
+                        <text x="160" y="60" text-anchor="middle" fill="#00f5ff" font-size="28" font-weight="700" opacity="0" class="stat-number">
+                            +67%
+                            <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="1.4s"/>
+                        </text>
+                        <text x="160" y="310" text-anchor="middle" fill="#a0aec0" font-size="14">Sales growth</text>
+                        <text x="160" y="330" text-anchor="middle" fill="#718096" font-size="12">with AI chatbots</text>
+                    </g>
+
+                    <!-- Bar 2: Lead Quality -->
+                    <g class="stat-bar">
+                        <rect x="340" y="280" width="120" height="0" fill="url(#barGradient2)" rx="8" class="bar-animation bar-2">
+                            <animate attributeName="height" from="0" to="210" dur="1.2s" fill="freeze" begin="0.4s"/>
+                            <animate attributeName="y" from="280" to="70" dur="1.2s" fill="freeze" begin="0.4s"/>
+                        </rect>
+                        <text x="400" y="60" text-anchor="middle" fill="#f093fb" font-size="28" font-weight="700" opacity="0" class="stat-number">
+                            +45%
+                            <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="1.6s"/>
+                        </text>
+                        <text x="400" y="310" text-anchor="middle" fill="#a0aec0" font-size="14">Accuracy</text>
+                        <text x="400" y="330" text-anchor="middle" fill="#718096" font-size="12">of lead qualification</text>
+                    </g>
+
+                    <!-- Bar 3: ROI -->
+                    <g class="stat-bar">
+                        <rect x="580" y="280" width="120" height="0" fill="url(#barGradient3)" rx="8" class="bar-animation bar-3">
+                            <animate attributeName="height" from="0" to="250" dur="1.2s" fill="freeze" begin="0.6s"/>
+                            <animate attributeName="y" from="280" to="30" dur="1.2s" fill="freeze" begin="0.6s"/>
+                        </rect>
+                        <text x="640" y="60" text-anchor="middle" fill="#4facfe" font-size="28" font-weight="700" opacity="0" class="stat-number">
+                            3.5x
+                            <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="1.8s"/>
+                        </text>
+                        <text x="640" y="310" text-anchor="middle" fill="#a0aec0" font-size="14">ROI in the first</text>
+                        <text x="640" y="330" text-anchor="middle" fill="#718096" font-size="12">year of implementation</text>
+                    </g>
+
+                    <!-- Baseline -->
+                    <line x1="80" y1="280" x2="720" y2="280" stroke="#2d3748" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value">99%</div>
+                    <div class="stat-label">B2B marketers report increased lead generation with AI agents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value">3x</div>
+                    <div class="stat-label">higher conversion of leads from chatbot vs traditional forms</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-value">80%</div>
+                    <div class="stat-label">of customer interactions handled by AI by end of 2025</div>
+                </div>
+            </div>
+
+            <p class="stats-conclusion">
+                <span class="highlight">And here's what this means for you:</span> while you're considering, your competitors are already qualifying leads 3 times more effectively. The difference between "I'll think about it" and "I'll implement it" is the difference between 67% growth and standing still.
+            </p>
+            <p class="stats-conclusion" style="margin-top: 20px; font-size: 1.15rem;">
+                Now let's look at <span class="highlight">exactly how I do this:</span>
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <h2 class="gradient-text section-title">What I implement</h2>
+            <p style="text-align: center; font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Four directions. Each solves a specific pain point.<br>
+                <span class="highlight">Here's how it works in practice:</span>
+            </p>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-number">01</div>
+                <h3>AI agents for B2B sales</h3>
+                <p class="service-subtitle">Sound familiar? You have enough leads, but "meetings aren't being scheduled" and managers are drowning in messages.</p>
+
+                <div class="service-features">
+                    <p><strong>The agent can:</strong></p>
+                    <ul>
+                        <li>ask questions and qualify according to your criteria</li>
+                        <li>collect information for proposals and calls</li>
+                        <li>answer common objections and guide to the next step</li>
+                        <li>record everything in CRM so the manager doesn't start from scratch</li>
+                    </ul>
+                    <p class="result"><span class="highlight">Result:</span> conversion to calls increases by 15-25%, response time drops from hours to 2 minutes, managers focus on warm leads.</p>
+                    <p style="margin-top: 15px; color: var(--text-muted); font-style: italic;">
+                        But that's just sales. What about existing clients?
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-number">02</div>
+                <h3>AI agents for support and customer service</h3>
+                <p class="service-subtitle">Here's a classic: the team answers the same questions day after day—"where's the manual", "how to pay", "what's included", "why isn't it working".</p>
+
+                <div class="service-features">
+                    <p><strong>The agent:</strong></p>
+                    <ul>
+                        <li>responds based on knowledge base and regulations</li>
+                        <li>requests missing data to avoid sending clients in circles</li>
+                        <li>separates simple requests from complex ones and passes to a human with context</li>
+                    </ul>
+                    <p class="result"><span class="highlight">Result:</span> handles up to 70-80% of routine requests, saves 15-25 hours per week for the team, clients get answers 24/7.</p>
+                    <p style="margin-top: 15px; color: var(--text-muted); font-style: italic;">
+                        Sales automated. Support unloaded. But what about visibility?
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-number">03</div>
+                <h3>AI agents for experts: content and funnel</h3>
+                <p class="service-subtitle">For experts, there's a special pain point: you know what to say. But how do you deliver it consistently, systematically, and without burnout in the content grind?</p>
+
+                <div class="service-features">
+                    <p><strong>The agent helps:</strong></p>
+                    <ul>
+                        <li>package your offer and articulate "why people buy"</li>
+                        <li>create a content plan for your funnel, not just "posts for the sake of posts"</li>
+                        <li>write video scripts, emails, landing page blocks, chat responses</li>
+                        <li>maintain your individual style and logic so you're recognizable</li>
+                    </ul>
+                    <p class="result"><span class="highlight">Result:</span> content creation 3-5 times faster, constant visibility in your niche, more organic leads without ads.</p>
+                    <p style="margin-top: 15px; color: var(--text-muted); font-style: italic;">
+                        Agents are about communication. But what if you need your own tool?
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-number">04</div>
+                <h3>Vibe coding: rapid tools without lengthy development</h3>
+                <p class="service-subtitle">Here's where the magic begins: when you don't need a "year-long startup development", but a working tool that pays off in a week.</p>
+
+                <div class="service-features">
+                    <p><strong>What is vibe coding:</strong></p>
+                    <p style="margin-bottom: 20px; color: var(--text-secondary); line-height: 1.75;">
+                        It's AI-powered development where I focus on logic and scenarios, and AI writes the code.
+                        The result is working tools <span class="highlight">in days, not months</span>, without a team of programmers and a huge budget.
+                    </p>
+                    <p><strong>What I create:</strong></p>
+                    <ul>
+                        <li>mini-panels for the team (tracking, analytics, management)</li>
+                        <li>proposal, brief, and script generators based on your templates</li>
+                        <li>internal assistants based on company knowledge base</li>
+                        <li>service prototypes for testing hypotheses</li>
+                    </ul>
+                    <p class="result"><span class="highlight">Result:</span> tool launch in 5-10 days instead of 2-3 months of traditional development, cost 5-7 times lower.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why B2B Section -->
+        <section class="why-b2b" data-aos="fade-up">
+            <h2 class="gradient-text section-title">Why this works in B2B</h2>
+            <p class="b2b-intro">Wait. All this sounds nice, but nice words don't sell in B2B.<br>
+            <span class="highlight">Here's what actually solves problems:</span></p>
+
+            <div class="b2b-circular-wrapper">
+                <div class="b2b-circle-container">
+                    <!-- Central circle -->
+                    <div class="b2b-center-circle">
+                        <div class="center-content">
+                            <div class="center-icon">🎯</div>
+                            <p class="center-text">Key<br>Success<br>Factors</p>
+                        </div>
+                    </div>
+
+                    <!-- Orbiting items -->
+                    <div class="b2b-orbit-item orbit-1">
+                        <div class="orbit-content">
+                            <div class="orbit-icon">⚡</div>
+                            <p class="orbit-title">Speed</p>
+                            <p class="orbit-desc">of response</p>
+                        </div>
+                        <div class="orbit-dot"></div>
+                    </div>
+
+                    <div class="b2b-orbit-item orbit-2">
+                        <div class="orbit-content">
+                            <div class="orbit-icon">💡</div>
+                            <p class="orbit-title">Quality</p>
+                            <p class="orbit-desc">of first questions</p>
+                        </div>
+                        <div class="orbit-dot"></div>
+                    </div>
+
+                    <div class="b2b-orbit-item orbit-3">
+                        <div class="orbit-content">
+                            <div class="orbit-icon">🔍</div>
+                            <p class="orbit-title">Accuracy</p>
+                            <p class="orbit-desc">of targeting the task</p>
+                        </div>
+                        <div class="orbit-dot"></div>
+                    </div>
+
+                    <div class="b2b-orbit-item orbit-4">
+                        <div class="orbit-content">
+                            <div class="orbit-icon">📈</div>
+                            <p class="orbit-title">Process</p>
+                            <p class="orbit-desc">to solution</p>
+                        </div>
+                        <div class="orbit-dot"></div>
+                    </div>
+
+                    <!-- Connecting lines -->
+                    <svg class="connection-lines" viewBox="0 0 400 400">
+                        <circle cx="200" cy="200" r="180" class="orbit-ring" />
+                        <line x1="200" y1="200" x2="200" y2="20" class="connect-line line-1" />
+                        <line x1="200" y1="200" x2="380" y2="200" class="connect-line line-2" />
+                        <line x1="200" y1="200" x2="200" y2="380" class="connect-line line-3" />
+                        <line x1="200" y1="200" x2="20" y2="200" class="connect-line line-4" />
+                    </svg>
+                </div>
+            </div>
+
+            <p class="b2b-conclusion">That's exactly why I build agents around these points, not around "smart answers".</p>
+
+            <div class="b2b-example">
+                <h3>See how this looks in reality:</h3>
+                <p class="example-text">
+                    11:00 PM. Client writes in chat. Agent in <span class="highlight">90 seconds</span> asks 4 qualifying questions,
+                    determines budget and urgency, offers a call slot through calendar.
+                    In the morning, the manager sees a ready summary and calls with an understanding of the task.
+                    <span class="highlight">Lead not lost, time not wasted</span> — that's why it works.
+                </p>
+                <p style="margin-top: 20px; color: var(--text-muted); font-style: italic; text-align: center;">
+                    And you know what's most interesting?
+                </p>
+            </div>
+        </section>
+
+        <!-- Recognition Section -->
+        <section class="recognition" data-aos="fade-up">
+            <h2 class="gradient-text section-title">Does this sound like you?</h2>
+            <p class="recognition-intro">Keep reading if you recognize yourself in at least two points.<br>
+            <span class="highlight">Because continuing to tolerate this is simply losing money:</span></p>
+            <ul class="checklist">
+                <li>leads exist, but conversion to calls is weak — and it's unclear where they're getting lost</li>
+                <li>managers are overloaded with messages and miss genuinely warm clients</li>
+                <li>support answers the same thing 50 times a week — and it's slowing growth</li>
+                <li>content is needed constantly, but diving into the content grind just doesn't have the energy</li>
+                <li>you want it systematic and fast, without "let's find a programmer for six months"</li>
+            </ul>
+            <p class="recognition-conclusion">Recognized yourself in at least two? Then here's what you need to know:</p>
+        </section>
+
+        <!-- Social Proof Section -->
+        <section class="social-proof" data-aos="fade-up">
+            <h2 class="gradient-text section-title">Who I've already worked with</h2>
+            <p class="proof-intro">AI agents are already implemented for companies in these niches:<br>
+            <span class="highlight">(And yes, results are confirmed by numbers, not "feelings")</span></p>
+
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-icon">🎯</div>
+                    <h3>SaaS and IT services</h3>
+                    <p>Automation of onboarding and technical support</p>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon">💼</div>
+                    <h3>B2B consulting</h3>
+                    <p>Lead qualification and client support</p>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon">📈</div>
+                    <h3>Experts and info-business</h3>
+                    <p>Content funnels and sales automation</p>
+                </div>
+            </div>
+
+            <div class="urgency-block">
+                <p class="urgency-text">
+                    <span class="urgency-icon">⚡</span>
+                    <span class="highlight">In January, taking only 3 new projects</span> — schedule is already 60% full.
+                    The sooner we start, the faster you'll get results.
+                </p>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 1.1rem; color: var(--text-muted); font-style: italic;">
+                Only one thing left — <span class="highlight">to begin.</span>
+            </p>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="cta-section" data-aos="fade-up">
+            <div class="cta-content">
+                <h2 class="gradient-text">Get a personalized automation plan in 5 minutes</h2>
+                <p>No need to make a decision right away. Just write to my AI agent — in a couple of minutes it will identify your main pain point, suggest what to automate first, and send a ready implementation scenario.</p>
+                <p class="cta-bonus">Bonus: first consultation-diagnosis (30 minutes) as a gift.</p>
+
+                <a href="#" class="cta-button" id="ctaButton">
+                    <span class="cta-text">Start dialogue with AI agent</span>
+                    <span class="cta-arrow">→</span>
+                </a>
+
+                <div class="particles-container">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Supabase Configuration -->
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
